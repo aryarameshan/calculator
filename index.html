@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+    }
+    .calculator {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+    }
+    .calculator input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: right;
+        border: none;
+        border-radius: 5px;
+    }
+    .calculator .row {
+        display: flex;
+    }
+    .calculator .row input[type="button"] {
+        flex: 1;
+        margin: 5px;
+        padding: 15px 0;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s;
+    }
+    .calculator .row input[type="button"]:hover {
+        background-color: #e0e0e0;
+    }
+    .calculator .row input[type="button"].operator {
+        background-color: orange
+        
+    }
+    .calculator .row input[type="button"].operator:hover {
+        background-color: white;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <h1 style="text-align: center; color: orange;">CALCULATOR</h1>
+    <input type="text" id="result" disabled>
+    <div class="row">
+        <input type="button" value="7" onclick="addToResult('7')">
+        <input type="button" value="8" onclick="addToResult('8')">
+        <input type="button" value="9" onclick="addToResult('9')">
+        <input type="button" class="operator" value="/"  onclick="addToResult('/')">
+    </div>
+    <div class="row">
+        <input type="button" value="4" onclick="addToResult('4')">
+        <input type="button" value="5" onclick="addToResult('5')">
+        <input type="button" value="6" onclick="addToResult('6')">
+        <input type="button" class="operator" value="*"  onclick="addToResult('*')">
+    </div>
+    <div class="row">
+        <input type="button" value="1" onclick="addToResult('1')">
+        <input type="button" value="2" onclick="addToResult('2')">
+        <input type="button" value="3" onclick="addToResult('3')">
+        <input type="button" class="operator" value="-" onclick="addToResult('-')">
+    </div>
+    <div class="row">
+        <input type="button" value="C" onclick="clearResult()">
+        <input type="button" value="0" onclick="addToResult('0')">
+        <input type="button" class="operator" value="="  onclick="equal()">
+        <input type="button" class="operator" value="+" onclick="addToResult('+')">
+    </div>
+</div>
+
+</body>
+<script src="./cal.js"></script>
+</html>
